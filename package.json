@@ -12,5 +12,8 @@
     "plugin",
     "nodejs",
     "executable"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "3.5.1"
+  }
 }
