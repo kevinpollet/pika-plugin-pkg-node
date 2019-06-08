@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "rm -rf pkg && pack build",
-    "format": "prettier --write '*.{json,md}'"
+    "format": "prettier --write 'src/**/*' '*.{json,md}'"
   },
   "devDependencies": {
     "@pika/pack": "0.3.7",
@@ -46,7 +46,7 @@
     }
   },
   "lint-staged": {
-    "*.{json,md}": [
+    "*.{ts,json,md}": [
       "prettier --write",
       "git add"
     ]
