@@ -14,13 +14,28 @@
     "executable"
   ],
   "scripts": {
+    "build": "rm -rf pkg && pack build",
     "format": "prettier --write '*.{json,md}'"
   },
   "devDependencies": {
+    "@pika/pack": "0.3.7",
+    "@pika/plugin-build-node": "0.4.0",
+    "@pika/plugin-ts-standard-pkg": "0.4.0",
+    "@pika/types": "0.4.0",
     "husky": "2.4.0",
     "lint-staged": "8.2.0",
     "prettier": "1.18.2",
     "typescript": "3.5.1"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ]
+    ]
   },
   "prettier": {
     "trailingComma": "es5"
