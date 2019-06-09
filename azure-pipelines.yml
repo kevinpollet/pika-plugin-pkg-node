@@ -1,0 +1,14 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+
+steps:
+  - task: NodeTool@0
+    inputs:
+     versionSpec: "8.x"
+
+  - script: npm ci
+
+  - script: npm run build
