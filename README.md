@@ -31,7 +31,7 @@ $ yarn add pika-plugin-pkg-node --dev
 }
 ```
 
-For more information about[@pika/pack][1] & help getting started, [check out the main project repo][1].
+For more information about [@pika/pack][1] & help getting started, [check out the main project repo][1].
 
 ## Options
 
