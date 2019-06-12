@@ -40,14 +40,24 @@ export const beforeJob = async ({
   });
 };
 
-export const build = ({ options, out }: BuilderOptions): Promise<void> => {
+export const build = ({
+  options,
+  out,
+  reporter,
+}: BuilderOptions): Promise<void> => {
   const outPath = join(out, options.outPath || "bin");
   const args = [out, "--out-path", outPath];
 
   if (options.targets) {
     args.push("--targets", options.targets.join(","));
   }
-  return exec(args);
+  return exec(args)
+    .then((): Promise<string[]> => fs.readdir(outPath))
+    .then((generatedFiles: string[]): void =>
+      generatedFiles.forEach((generatedFile: string): void =>
+        reporter.created(join(outPath, generatedFile))
+      )
+    );
 };
 
 export const afterJob = ({ out }: BuilderOptions): Promise<void> => {
