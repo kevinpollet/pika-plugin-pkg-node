@@ -31,6 +31,8 @@ $ yarn add pika-plugin-pkg-node --dev
 
 ## Options
 
+> This plugin runs [@zeit/pkg](https://github.com/zeit/pkg) under the hood. Most of the available configuration options and CLI flags will be available, see https://github.com/zeit/pkg#usage for more details.
+
 - `name`: Optional, string, defaults to the package name.
 - `outPath`: Optional, string, defaults to `bin`.
 - `targets`: Optional, string[], defaults to `["linux","macos","win"]`.
