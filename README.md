@@ -33,9 +33,27 @@ $ yarn add pika-plugin-pkg-node --dev
 
 > This plugin runs [@zeit/pkg](https://github.com/zeit/pkg) under the hood. Most of the available configuration options and CLI flags will be available, see https://github.com/zeit/pkg#usage for more details.
 
-- `name`: Optional, string, defaults to the package name.
-- `outPath`: Optional, string, defaults to `bin`.
-- `targets`: Optional, string[], defaults to `["linux","macos","win"]`.
+#### `name`:
+
+> `string`, defaults to the package name.
+
+#### `outPath`
+
+> `string`, defaults to `bin`.
+
+Specify the path, relative to the `pkg` folder, where the generated executables must be created.
+
+#### `targets`
+
+> `string[]`, defaults to `["linux","macos","win"]`
+
+A target consists of 3 elements, separated by dashes, for example `node6-macos-x64` or `node4-linux-armv6`:
+
+- nodeRange: node\${n} or latest
+- platform: freebsd, linux, alpine, macos, win
+- arch: x64, x86, armv6, armv7
+
+You may omit any element (and specify just node6 for example). The omitted elements will be taken from current platform or system-wide Node.js installation (its version and arch). There is also an alias `host`, that means that all 3 elements are taken from current platform/Node.js.
 
 ## License
 
