@@ -29,6 +29,12 @@ $ yarn add pika-plugin-pkg-node --dev
 }
 ```
 
+## Options
+
+- `name`: Optional, string, defaults to the package name.
+- `outPath`: Optional, string, defaults to `bin`.
+- `targets`: Optional, string[], defaults to `["linux","macos","win"]`.
+
 ## License
 
 [MIT](./LICENSE.md) © kevinpollet
