@@ -6,7 +6,8 @@
   "author": "kevinpollet <pollet.kevin@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf pkg && pika-pack build ."
+    "build": "rm -rf pkg && pika-pack build .",
+    "prebuild": "npm run build --prefix ../../"
   },
   "bin": "dist-node/index.js",
   "dependencies": {
