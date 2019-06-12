@@ -41,7 +41,7 @@ export const beforeJob = async ({
 };
 
 export const build = ({ options, out }: BuilderOptions): Promise<void> => {
-  const outPath = join(out, options.outPath || "targets");
+  const outPath = join(out, options.outPath || "bin");
 
   return exec([out, "--out-path", outPath]);
 };
