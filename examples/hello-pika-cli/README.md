@@ -1,7 +1,7 @@
 # hello-pika-cli
 
-1. Install dependencies: `npm install`
-2. Package executables: `npm run build`
+1. Install dependencies with `npm install`
+2. Package executables with `npm run build`
 3. Run the executable corresponding to your architecture:
 
 ```shell
