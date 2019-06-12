@@ -23,7 +23,7 @@ $ yarn add pika-plugin-pkg-node --dev
       ["@pika/plugin-standard-pkg"],
       ["@pika/plugin-build-node"],
       ["@pika/plugin-simple-bin", { "bin": "my-cli" }],
-      ["pika-plugin-pkg-node", { /* options: see below */ }]
+      ["pika-plugin-pkg-node", { /* options: see below */ } ]
     ]
   }
 }
@@ -31,4 +31,4 @@ $ yarn add pika-plugin-pkg-node --dev
 
 ## License
 
-[MIT](./LICENSE.md)
+[MIT](./LICENSE.md) © kevinpollet
