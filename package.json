@@ -17,11 +17,17 @@
     "build": "rm -rf pkg && pack build",
     "format": "prettier --write 'src/**/*' '*.{json,md}'"
   },
+  "dependencies": {
+    "fs-extra": "8.0.1",
+    "@pika/types": "0.4.0",
+    "pkg": "4.4.0"
+  },
   "devDependencies": {
     "@pika/pack": "0.3.7",
     "@pika/plugin-build-node": "0.4.0",
     "@pika/plugin-ts-standard-pkg": "0.4.0",
-    "@pika/types": "0.4.0",
+    "@types/fs-extra": "7.0.0",
+    "@types/node": "8.10.49",
     "husky": "2.4.0",
     "lint-staged": "8.2.0",
     "prettier": "1.18.2",

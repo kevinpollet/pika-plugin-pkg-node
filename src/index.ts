@@ -5,15 +5,45 @@
  * found in the LICENSE.md file.
  */
 
-import { BuilderOptions } from "@pika/types";
+import fs from "fs-extra";
+import { join } from "path";
+import { exec } from "pkg";
+import { BuilderOptions, MessageError } from "@pika/types";
 
-export const beforeJob = async () => console.log("Before job");
+export const beforeJob = async ({ manifest, options, out }: BuilderOptions) => {
+  const packageJSONPath = join(out, "package.json");
+  const distNodeFolderPath = join(out, "dist-node");
+  const nodeEntrypointPath = join(distNodeFolderPath, "index.js");
 
-export const afterJob = async () => console.log("After job");
+  const distNodeFolderExists = await fs.pathExists(distNodeFolderPath);
+  if (!distNodeFolderExists) {
+    throw new MessageError(
+      `"${distNodeFolderPath}" does not exist, or was not yet created in the pipeline.`
+    );
+  }
 
-export const beforeBuild = async () => console.log("Before build");
+  const nodeEntrypointExists = await fs.pathExists(nodeEntrypointPath);
+  if (!nodeEntrypointExists) {
+    throw new MessageError(
+      `"${nodeEntrypointPath}" is the expected node entrypoint, but it does not exist.`
+    );
+  }
 
-export const build = async (builderOptions: BuilderOptions) =>
-  console.log(`Build ${builderOptions.cwd}`);
+  return fs.writeJSON(packageJSONPath, {
+    name: options.name || manifest.name,
+    bin: manifest.bin || join(distNodeFolderPath, "index.bin.js"),
+    main: manifest.main || nodeEntrypointPath,
+  });
+};
 
-export const afterBuild = async () => console.log("After build");
+export const build = ({ out }: BuilderOptions) => {
+  const outDir = join(out, "targets");
+
+  return exec([out, "--out-dir", outDir]);
+};
+
+export const afterJob = ({ out }: BuilderOptions) => {
+  const packageJSONPath = join(out, "package.json");
+
+  return fs.remove(packageJSONPath);
+};
