@@ -11,4 +11,6 @@ steps:
 
   - script: npm ci
 
+  - script: npm run lint
+
   - script: npm run build

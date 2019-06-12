@@ -10,7 +10,11 @@ import { join } from "path";
 import { exec } from "pkg";
 import { BuilderOptions, MessageError } from "@pika/types";
 
-export const beforeJob = async ({ manifest, options, out }: BuilderOptions) => {
+export const beforeJob = async ({
+  manifest,
+  options,
+  out,
+}: BuilderOptions): Promise<void> => {
   const packageJSONPath = join(out, "package.json");
   const distNodeFolderPath = join(out, "dist-node");
   const nodeEntrypointPath = join(distNodeFolderPath, "index.js");
@@ -36,13 +40,13 @@ export const beforeJob = async ({ manifest, options, out }: BuilderOptions) => {
   });
 };
 
-export const build = ({ out }: BuilderOptions) => {
+export const build = ({ out }: BuilderOptions): Promise<void> => {
   const outDir = join(out, "targets");
 
   return exec([out, "--out-dir", outDir]);
 };
 
-export const afterJob = ({ out }: BuilderOptions) => {
+export const afterJob = ({ out }: BuilderOptions): Promise<void> => {
   const packageJSONPath = join(out, "package.json");
 
   return fs.remove(packageJSONPath);

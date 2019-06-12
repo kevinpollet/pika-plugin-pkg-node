@@ -14,8 +14,9 @@
     "executable"
   ],
   "scripts": {
-    "build": "rm -rf pkg && pack build",
-    "format": "prettier --write 'src/**/*' '*.{json,md}'"
+    "build": "rm -rf pkg && pika-pack build",
+    "format": "prettier --write 'src/**/*' '*.{json,md}'",
+    "lint": "eslint 'src/**/*'"
   },
   "dependencies": {
     "fs-extra": "8.0.1",
@@ -28,6 +29,10 @@
     "@pika/plugin-ts-standard-pkg": "0.4.0",
     "@types/fs-extra": "7.0.0",
     "@types/node": "8.10.49",
+    "@typescript-eslint/eslint-plugin": "1.10.2",
+    "@typescript-eslint/parser": "1.10.2",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.3.0",
     "husky": "2.4.1",
     "lint-staged": "8.2.0",
     "prettier": "1.18.2",
@@ -41,6 +46,15 @@
       [
         "@pika/plugin-build-node"
       ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint"
     ]
   },
   "prettier": {
