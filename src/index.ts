@@ -17,7 +17,14 @@ export const beforeJob = async ({
 }: BuilderOptions): Promise<void> => {
   const packageJSONPath = join(out, "package.json");
   const distNodeFolderPath = join(out, "dist-node");
-  const nodeEntrypointPath = join(distNodeFolderPath, "index.js");
+  const nodeEntrypointPath = join(
+    distNodeFolderPath,
+    manifest.main || "index.js"
+  );
+  const nodeBinEntrypointPath = join(
+    distNodeFolderPath,
+    manifest.bin || "index.bin.js"
+  );
 
   const distNodeFolderExists = await fs.pathExists(distNodeFolderPath);
   if (!distNodeFolderExists) {
@@ -33,10 +40,17 @@ export const beforeJob = async ({
     );
   }
 
+  const nodeBinEntrypointExists = await fs.pathExists(nodeBinEntrypointPath);
+  if (!nodeBinEntrypointExists) {
+    throw new MessageError(
+      `"${nodeBinEntrypointPath}" is the expected bin entrypoint, but it does not exist.`
+    );
+  }
+
   return fs.writeJSON(packageJSONPath, {
     name: options.name || manifest.name,
-    bin: manifest.bin || join(distNodeFolderPath, "index.bin.js"),
-    main: manifest.main || nodeEntrypointPath,
+    bin: nodeBinEntrypointPath,
+    main: nodeEntrypointPath,
   });
 };
 
