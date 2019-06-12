@@ -19,8 +19,8 @@
     "lint": "eslint 'src/**/*'"
   },
   "dependencies": {
-    "fs-extra": "8.0.1",
     "@pika/types": "0.4.0",
+    "fs-extra": "8.0.1",
     "pkg": "4.4.0"
   },
   "devDependencies": {

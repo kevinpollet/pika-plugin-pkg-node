@@ -40,10 +40,10 @@ export const beforeJob = async ({
   });
 };
 
-export const build = ({ out }: BuilderOptions): Promise<void> => {
-  const outDir = join(out, "targets");
+export const build = ({ options, out }: BuilderOptions): Promise<void> => {
+  const outPath = join(out, options.outPath || "targets");
 
-  return exec([out, "--out-dir", outDir]);
+  return exec([out, "--out-path", outPath]);
 };
 
 export const afterJob = ({ out }: BuilderOptions): Promise<void> => {
