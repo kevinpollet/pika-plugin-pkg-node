@@ -1,0 +1,37 @@
+{
+  "name": "hello-pika-cli",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Example of a CLI packaged as an executable",
+  "author": "kevinpollet <pollet.kevin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf pkg && pika-pack build ."
+  },
+  "bin": "dist-node/index.js",
+  "dependencies": {
+    "chalk": "2.4.2"
+  },
+  "devDependencies": {
+    "@pika/pack": "^0.3.7",
+    "@pika/plugin-build-node": "0.4.0",
+    "@pika/plugin-standard-pkg": "0.4.0",
+    "pika-plugin-pkg-node": "file:../../pkg"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "pika-plugin-pkg-node",
+        {
+          "name": "hello-pika"
+        }
+      ]
+    ]
+  }
+}

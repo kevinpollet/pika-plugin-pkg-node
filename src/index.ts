@@ -21,10 +21,9 @@ export const beforeJob = async ({
     distNodeFolderPath,
     manifest.main || "index.js"
   );
-  const nodeBinEntrypointPath = join(
-    distNodeFolderPath,
-    manifest.bin || "index.bin.js"
-  );
+  const nodeBinEntrypointPath = manifest.bin
+    ? join(out, manifest.bin[manifest.name])
+    : join(distNodeFolderPath, "index.bin.js");
 
   const distNodeFolderExists = await fs.pathExists(distNodeFolderPath);
   if (!distNodeFolderExists) {
