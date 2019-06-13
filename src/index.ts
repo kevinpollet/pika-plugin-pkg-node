@@ -17,39 +17,37 @@ export const beforeJob = async ({
 }: BuilderOptions): Promise<void> => {
   const packageJSONPath = join(out, "package.json");
   const distNodeFolderPath = join(out, "dist-node");
-  const nodeEntrypointPath = join(
+  const simpleBinEntrypointPath = join(distNodeFolderPath, "index.bin.js");
+  const mainEntrypointPath = join(
     distNodeFolderPath,
     manifest.main || "index.js"
   );
-  const nodeBinEntrypointPath = manifest.bin
-    ? join(out, manifest.bin[manifest.name])
-    : join(distNodeFolderPath, "index.bin.js");
 
-  const distNodeFolderExists = await fs.pathExists(distNodeFolderPath);
-  if (!distNodeFolderExists) {
+  const distNodeFolderPathExists = await fs.pathExists(distNodeFolderPath);
+  if (!distNodeFolderPathExists) {
     throw new MessageError(
       `"${distNodeFolderPath}" does not exist, or was not yet created in the pipeline.`
     );
   }
 
-  const nodeEntrypointExists = await fs.pathExists(nodeEntrypointPath);
-  if (!nodeEntrypointExists) {
+  const mainEntrypointPathExists = await fs.pathExists(mainEntrypointPath);
+  if (!mainEntrypointPathExists) {
     throw new MessageError(
-      `"${nodeEntrypointPath}" is the expected node entrypoint, but it does not exist.`
+      `"${mainEntrypointPath}" is the expected node entrypoint, but it does not exist.`
     );
   }
 
-  const nodeBinEntrypointExists = await fs.pathExists(nodeBinEntrypointPath);
-  if (!nodeBinEntrypointExists) {
-    throw new MessageError(
-      `"${nodeBinEntrypointPath}" is the expected bin entrypoint, but it does not exist.`
-    );
-  }
+  const simpleBinEntrypointPathExists = await fs.pathExists(
+    simpleBinEntrypointPath
+  );
+  const binEntrypointPath = simpleBinEntrypointPathExists
+    ? simpleBinEntrypointPath
+    : manifest.bin;
 
   return fs.writeJSON(packageJSONPath, {
     name: options.name || manifest.name,
-    bin: nodeBinEntrypointPath,
-    main: nodeEntrypointPath,
+    bin: binEntrypointPath,
+    main: mainEntrypointPath,
   });
 };
 
