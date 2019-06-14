@@ -59,12 +59,18 @@ export const build = ({
   out,
   reporter,
 }: BuilderOptions): Promise<void> => {
+  const { debug, targets } = options;
   const outPath = join(out, options.outPath || "bin");
   const args = [out, "--out-path", outPath];
 
-  if (options.targets) {
-    args.push("--targets", options.targets.join(","));
+  if (targets) {
+    args.push("--targets", targets.join(","));
   }
+
+  if (debug) {
+    args.push("--debug");
+  }
+
   return exec(args)
     .then((): Promise<string[]> => fs.readdir(outPath))
     .then((generatedFiles: string[]): void =>

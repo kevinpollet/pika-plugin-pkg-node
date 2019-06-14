@@ -36,6 +36,12 @@ For more information about [@pika/pack][1] & help getting started, [check out th
 
 This plugin runs the awesome [@zeit/pkg][2] under the hood. Most of the available configuration options and CLI flags are available.
 
+### `debug`
+
+> Defaults to `false`
+
+Log packaging process. Useful, if you have issues with some particular file not packaged into the executable.
+
 ### `name`
 
 > Defaults to the package name
