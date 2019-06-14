@@ -6,8 +6,7 @@
   "author": "kevinpollet <pollet.kevin@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf pkg && pika-pack build .",
-    "prebuild": "npm install --prefix ../../ && npm run build --prefix ../../"
+    "build": "rm -rf pkg && pika-pack build ."
   },
   "bin": "dist-node/index.js",
   "dependencies": {
@@ -17,7 +16,8 @@
     "@pika/pack": "0.3.7",
     "@pika/plugin-build-node": "0.4.0",
     "@pika/plugin-copy-assets": "^0.4.0",
-    "@pika/plugin-standard-pkg": "0.4.0"
+    "@pika/plugin-standard-pkg": "0.4.0",
+    "pika-plugin-pkg-node": "^1.0.0"
   },
   "@pika/pack": {
     "pipeline": [
@@ -31,7 +31,7 @@
         "@pika/plugin-copy-assets"
       ],
       [
-        "../../pkg",
+        "pika-plugin-pkg-node",
         {
           "name": "hello-pika",
           "assets": [
