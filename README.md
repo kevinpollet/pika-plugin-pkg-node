@@ -36,6 +36,12 @@ For more information about [@pika/pack][1] & help getting started, [check out th
 
 This plugin runs the awesome [@zeit/pkg][2] under the hood. Most of the available configuration options and CLI flags are available.
 
+### `assets`
+
+> Default value: `[]`
+
+Specify the assets packaged into the final executable as raw content without modifications. Assets is a list of globs, e.g. `["assets/**/*"]`.
+
 ### `debug`
 
 > Defaults to `false`
@@ -69,12 +75,6 @@ A target consists of 3 elements, separated by dashes, for example `node6-macos-x
 - arch: x64, x86, armv6, armv7
 
 You may omit any element (and specify just node6 for example). The omitted elements will be taken from current platform or system-wide Node.js installation (its version and arch). There is also an alias `host`, that means that all 3 elements are taken from current platform/Node.js.
-
-### `assets`
-
-> Default value: `[]`
-
-Specify the assets packaged into the final executable as raw content without modifications. Assets is a list of globs, e.g. `["assets/**/*"]`.
 
 ## Examples
 
