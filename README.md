@@ -68,7 +68,7 @@ You may omit any element (and specify just node6 for example). The omitted eleme
 
 > Default value: `[]`
 
-assets is a list of globs. Files specified as assets will be packaged into executable as raw content without modifications.
+Specify the assets packaged into the final executable as raw content without modifications. Assets is a list of globs, e.g. `["assets/**/*"]`.
 
 ## Examples
 
