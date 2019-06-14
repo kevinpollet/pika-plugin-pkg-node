@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf pkg && pika-pack build .",
-    "prebuild": "npm run build --prefix ../../"
+    "prebuild": "npm install --prefix ../../ && npm run build --prefix ../../"
   },
   "bin": "dist-node/index.js",
   "dependencies": {
