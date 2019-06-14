@@ -48,6 +48,9 @@ export const beforeJob = async ({
     name: options.name || manifest.name,
     bin: binEntrypointPath,
     main: mainEntrypointPath,
+    pkg: {
+      assets: options.assets || [],
+    },
   });
 };
 

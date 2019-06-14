@@ -65,6 +65,12 @@ A target consists of 3 elements, separated by dashes, for example `node6-macos-x
 
 You may omit any element (and specify just node6 for example). The omitted elements will be taken from current platform or system-wide Node.js installation (its version and arch). There is also an alias `host`, that means that all 3 elements are taken from current platform/Node.js.
 
+### `assets`
+
+> Default value: `[]`
+
+assets is a list of globs. Files specified as assets will be packaged into executable as raw content without modifications.
+
 ## Examples
 
 - [hello-pika-cli](./examples/hello-pika-cli): Example of a CLI packaged as an executable

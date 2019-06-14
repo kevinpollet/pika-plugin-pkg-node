@@ -16,8 +16,8 @@
   "devDependencies": {
     "@pika/pack": "0.3.7",
     "@pika/plugin-build-node": "0.4.0",
-    "@pika/plugin-standard-pkg": "0.4.0",
-    "pika-plugin-pkg-node": "file:../../pkg"
+    "@pika/plugin-copy-assets": "^0.4.0",
+    "@pika/plugin-standard-pkg": "0.4.0"
   },
   "@pika/pack": {
     "pipeline": [
@@ -28,9 +28,15 @@
         "@pika/plugin-build-node"
       ],
       [
-        "pika-plugin-pkg-node",
+        "@pika/plugin-copy-assets"
+      ],
+      [
+        "../../pkg",
         {
-          "name": "hello-pika"
+          "name": "hello-pika",
+          "assets": [
+            "assets/**/*"
+          ]
         }
       ]
     ]

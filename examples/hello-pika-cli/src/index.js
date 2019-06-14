@@ -5,8 +5,11 @@
  * found in the LICENSE.md file.
  */
 
+import fs from "fs";
+import { URL } from "url";
 import chalk from "chalk";
 
-process.stdout.write(
-  chalk`Hello ${process.argv[2] || "Pika"} {yellow ʢ◉ᴥ◉ʡ}\n`
-);
+const messageFileURL = new URL("../assets/message.json", import.meta.url);
+const { value } = JSON.parse(fs.readFileSync(messageFileURL.pathname));
+
+console.log(value, chalk.blue(process.argv[2] || "Pika")); // eslint-disable-line
