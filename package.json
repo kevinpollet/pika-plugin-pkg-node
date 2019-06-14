@@ -11,12 +11,13 @@
     "pika",
     "plugin",
     "nodejs",
-    "executable"
+    "executable",
+    "pkg"
   ],
   "scripts": {
     "build": "rm -rf pkg && pika-pack build",
-    "format": "prettier --write 'src/**/*' '*.{json,md}'",
-    "lint": "eslint 'src/**/*'",
+    "format": "prettier --write '**/*.{ts,js,json,md,yml}'  '!**/pkg/**'",
+    "lint": "eslint '{src,examples/hello-pika-cli/src}/**/*'",
     "release": "pika-pack publish"
   },
   "dependencies": {
@@ -70,7 +71,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,json,md}": [
+    "*.{ts,yml,json,md}": [
       "prettier --write",
       "git add"
     ]
