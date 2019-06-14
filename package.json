@@ -1,6 +1,6 @@
 {
   "name": "pika-plugin-pkg-node",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Pika plugin to package a Node.js app into an executable",
   "author": "kevinpollet <pollet.kevin@gmail.com>",
   "homepage": "https://github.com/kevinpollet/pika-plugin-pkg-node#readme",
