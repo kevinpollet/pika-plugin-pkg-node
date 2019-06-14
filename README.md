@@ -24,7 +24,6 @@ $ yarn add pika-plugin-pkg-node --dev
     "pipeline": [
       ["@pika/plugin-standard-pkg"],
       ["@pika/plugin-build-node"],
-      ["@pika/plugin-simple-bin", { "bin": "my-cli" }],
       ["pika-plugin-pkg-node", { /* options: see below */ } ]
     ]
   }
