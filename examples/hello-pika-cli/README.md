@@ -2,7 +2,7 @@
 
 1. Install dependencies with `npm install`
 2. Package executables with `npm run build`
-3. Run the executable corresponding to your architecture:
+3. Run the executable corresponding to your architecture
 
 ```shell
 # MacOS
