@@ -7,10 +7,10 @@
 ```shell
 # MacOS
 $ ./pkg/bin/hello-pika-macos
-Hello Pika ʢ◉ᴥ◉ʡ
+Hello Pika ฅʢ◉ᴥ◉ʡ
 
 $ ./pkg/bin/hello-pika-macos Roger
-Hello Roger ʢ◉ᴥ◉ʡ
+Hello Roger ฅʢ◉ᴥ◉ʡ
 ```
 
 ## License
