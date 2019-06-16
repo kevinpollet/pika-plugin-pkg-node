@@ -78,6 +78,12 @@ You may omit any element (and specify just node6 for example). The omitted eleme
 
 - [hello-pika-cli](./examples/hello-pika-cli): Example of a CLI packaged as an executable
 
+## Contributing
+
+Contributions are very welcome!
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information and how to get started.
+
 ## License
 
 [MIT](./LICENSE.md) © kevinpollet
