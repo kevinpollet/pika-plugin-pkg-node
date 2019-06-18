@@ -17,7 +17,7 @@
     "@pika/plugin-build-node": "0.4.0",
     "@pika/plugin-copy-assets": "0.4.0",
     "@pika/plugin-standard-pkg": "0.4.0",
-    "pika-plugin-pkg-node": "^1.0.0"
+    "pika-plugin-pkg-node": "1.x"
   },
   "@pika/pack": {
     "pipeline": [
