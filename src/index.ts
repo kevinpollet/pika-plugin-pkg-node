@@ -50,6 +50,7 @@ export const beforeJob = async ({
     main: mainEntrypointPath,
     pkg: {
       assets: options.assets || [],
+      scripts: options.scripts || [],
     },
   });
 };
@@ -63,12 +64,12 @@ export const build = ({
   const outPath = join(out, options.outPath || "bin");
   const args = [out, "--out-path", outPath];
 
-  if (targets) {
-    args.push("--targets", targets.join(","));
-  }
-
   if (debug) {
     args.push("--debug");
+  }
+
+  if (targets) {
+    args.push("--targets", targets.join(","));
   }
 
   return exec(args)

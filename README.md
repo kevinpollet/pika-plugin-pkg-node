@@ -38,7 +38,7 @@ This plugin runs the awesome [@zeit/pkg][2] under the hood. Most of the availabl
 
 > Default value: `[]`
 
-Specify the assets packaged into the final executable as raw content without modifications. Assets is a list of globs, e.g. `["assets/**/*"]`.
+Specify the assets packaged into the executable as raw content without modifications. Assets is a list of globs, e.g. `["assets/**/*"]`.
 
 ### `debug`
 
@@ -61,6 +61,12 @@ Specify the name of the generated executable. For example, if the value of `name
 > Default value: `"bin"`
 
 Specify the path, relative to the `pkg` folder, where the generated executables must be created.
+
+### `scripts`
+
+> Default value: `[]`
+
+Specify the scripts packaged into the executable without sources. Files specified as scripts will be compiled using `v8::ScriptCompiler`. Scripts is a list of globs, e.g. `["scripts/**/*"]`.
 
 ### `targets`
 
