@@ -1,6 +1,6 @@
 # pika-plugin-pkg-node &middot; [![Build Status](https://dev.azure.com/kevinpollet/pika-plugin-pkg-node/_apis/build/status/kevinpollet.pika-plugin-pkg-node?branchName=master)](https://dev.azure.com/kevinpollet/pika-plugin-pkg-node/_build/latest?definitionId=5&branchName=master) ![GitHub](https://img.shields.io/github/license/kevinpollet/pika-plugin-pkg-node.svg?color=blue)
 
-> A [@pika/pack][1] build plugin. Package a Node.js app into a executable that can be run even on devices without Node.js installed.
+> A [@pika/pack][1] build plugin. Package a Node.js app into an executable that can be run on devices without installing Node.js. This plugin use the awesome [@zeit/pkg][2] library under the hood.
 
 ## Install
 
@@ -32,13 +32,11 @@ For more information about [@pika/pack][1] & help getting started, [check out th
 
 ## Options
 
-This plugin runs the awesome [@zeit/pkg][2] under the hood. Most of the available configuration options and CLI flags are available.
-
 ### `assets`
 
 > Default value: `[]`
 
-Specify the assets packaged into the executable as raw content without modifications. Assets is a list of globs, e.g. `["assets/**/*"]`.
+Specify the assets packaged into the executable as raw content without modifications. The `assets` property is a list of globs, e.g. `["assets/**/*"]`.
 
 ### `debug`
 
@@ -50,7 +48,7 @@ Log packaging process. Useful, if you have issues with some particular file not 
 
 > Defaults to the package name
 
-Specify the name of the generated executable. For example, if the value of `name` field is `"pika"`, the following executables will be generated:
+Specify the name of the generated executable. For example, if the value of `name` property is `"pika"`, the following executables will be generated:
 
 - `pika-macos`
 - `pika-linux`
@@ -66,7 +64,7 @@ Specify the path, relative to the `pkg` folder, where the generated executables 
 
 > Default value: `[]`
 
-Specify the scripts packaged into the executable without sources. Files specified as scripts will be compiled using `v8::ScriptCompiler`. Scripts is a list of globs, e.g. `["scripts/**/*"]`.
+Specify the scripts packaged into the executable without sources. Files specified as scripts will be compiled using `v8::ScriptCompiler`. The `scripts` property is a list of globs, e.g. `["scripts/**/*"]`.
 
 ### `targets`
 
@@ -74,11 +72,11 @@ Specify the scripts packaged into the executable without sources. Files specifie
 
 A target consists of 3 elements, separated by dashes, for example `node6-macos-x64` or `node4-linux-armv6`:
 
-- nodeRange: node\${n} or latest
-- platform: freebsd, linux, alpine, macos, win
-- arch: x64, x86, armv6, armv7
+- `nodeRange`: node\${n} or latest
+- `platform`: freebsd, linux, alpine, macos, win
+- `arch`: x64, x86, armv6, armv7
 
-You may omit any element (and specify just node6 for example). The omitted elements will be taken from current platform or system-wide Node.js installation (its version and arch). There is also an alias `host`, that means that all 3 elements are taken from current platform/Node.js.
+You may omit any element (and specify just node6 for example. The omitted elements will be taken from the current platform or system-wide Node.js installation (its version and arch). There is also an alias `host`, that means that all 3 elements are taken from the current platform/Node.js.
 
 ## Examples
 
