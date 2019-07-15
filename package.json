@@ -31,7 +31,7 @@
     "@pika/plugin-ts-standard-pkg": "0.4.0",
     "@types/fs-extra": "8.0.0",
     "@types/node": "8.10.49",
-    "@typescript-eslint/eslint-plugin": "1.11.0",
+    "@typescript-eslint/eslint-plugin": "1.12.0",
     "@typescript-eslint/parser": "1.11.0",
     "eslint": "5.16.0",
     "eslint-config-prettier": "6.0.0",
