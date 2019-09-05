@@ -18,7 +18,8 @@
     "build": "rm -rf pkg && pika build",
     "format": "prettier --write '**/*.{ts,js,json,md,yml}'  '!**/pkg/**'",
     "lint": "eslint '{src,examples/hello-pika-cli/src}/**/*'",
-    "release": "pika publish"
+    "release": "pika publish",
+    "version": "npm run build"
   },
   "dependencies": {
     "@pika/types": "^0.6.0",
