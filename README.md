@@ -1,6 +1,6 @@
 # pika-plugin-pkg-node
 
-[![Build Status](https://github.com/kevinpollet/typescript-docker-multi-stage-build/workflows/Build/badge.svg)](https://github.com/kevinpollet/pika-plugin-pkg-node/actions)
+[![Build Status](https://github.com/kevinpollet/pika-plugin-pkg-node/workflows/Build/badge.svg)](https://github.com/kevinpollet/pika-plugin-pkg-node/actions)
 [![GitHub](https://img.shields.io/github/license/kevinpollet/pika-plugin-pkg-node.svg?color=blue)](./LICENSE.md)
 
 > A [@pika/pack][1] build plugin. Package a Node.js app into an executable that can be run on devices without installing Node.js. This plugin use the awesome [@zeit/pkg][2] library under the hood.
