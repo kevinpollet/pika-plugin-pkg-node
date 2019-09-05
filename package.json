@@ -15,7 +15,7 @@
     "pkg"
   ],
   "scripts": {
-    "build": "rm -rf pkg && pika-pack build",
+    "build": "rm -rf pkg && pika build",
     "format": "prettier --write '**/*.{ts,js,json,md,yml}'  '!**/pkg/**'",
     "lint": "eslint '{src,examples/hello-pika-cli/src}/**/*'",
     "release": "pika-pack publish"
