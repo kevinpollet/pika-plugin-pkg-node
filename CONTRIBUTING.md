@@ -1,81 +1,29 @@
-# Contributing to pika-plugin-pkg-node
+# How to contribute? <!-- omit in toc -->
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change.
-
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+- [Code of Conduct](#code-of-conduct)
+- [Issues and Bugs](#issues-and-bugs)
+- [Feature Requests](#feature-requests)
 
 ## Code of Conduct
 
-### Our Pledge
+Help us to keep this project open and inclusive. Please read and follow the [Code of Conduct][1].
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, gender identity and expression, level of experience,
-nationality, personal appearance, race, religion, or sexual identity and
-orientation.
+## Issues and Bugs
 
-### Our Standards
+**Found a bug?**
 
-Examples of behavior that contributes to creating a positive environment
-include:
+If you found a bug in the code you can [submit an issue][2] or even better,[submit a pull request][3] with the fix.
 
-- Using welcoming and inclusive language
-- Being respectful of differing viewpoints and experiences
-- Gracefully accepting constructive criticism
-- Focusing on what is best for the community
-- Showing empathy towards other community members
+Before you submit an issue, please search in the issue tracker, maybe an issue for your problem already exists and the discussion might inform you of workarounds.
 
-Examples of unacceptable behavior by participants include:
+## Feature Requests
 
-- The use of sexualized language or imagery and unwelcome sexual attention or
-  advances
-- Trolling, insulting/derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information, such as a physical or electronic
-  address, without explicit permission
-- Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+**Missing a feature?**
 
-### Our Responsibilities
+You can request a new feature by [submitting an issue][2]. If you want to implement a new feature, please submit an issue with your proposal first.
 
-Project maintainers are responsible for clarifying the standards of acceptable
-behavior and are expected to take appropriate and fair corrective action in
-response to any instances of unacceptable behavior.
+Before you submit an issue for your new feature, please search in the issue tracker, maybe an issue already exists.
 
-Project maintainers have the right and responsibility to remove, edit, or
-reject comments, commits, code, wiki edits, issues, and other contributions
-that are not aligned to this Code of Conduct, or to ban temporarily or
-permanently any contributor for other behaviors that they deem inappropriate,
-threatening, offensive, or harmful.
-
-### Scope
-
-This Code of Conduct applies both within project spaces and in public spaces
-when an individual is representing the project or its community. Examples of
-representing a project or community include using an official project e-mail
-address, posting via an official social media account, or acting as an appointed
-representative at an online or offline event. Representation of a project may be
-further defined and clarified by project maintainers.
-
-### Enforcement
-
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at pollet.kevin@gmail.com. All
-complaints will be reviewed and investigated and will result in a response that
-is deemed necessary and appropriate to the circumstances. The project team is
-obligated to maintain confidentiality with regard to the reporter of an incident.
-Further details of specific enforcement policies may be posted separately.
-
-Project maintainers who do not follow or enforce the Code of Conduct in good
-faith may face temporary or permanent repercussions as determined by other
-members of the project's leadership.
-
-### Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at [http://contributor-covenant.org/version/1/4][version]
-
-[homepage]: http://contributor-covenant.org
-[version]: http://contributor-covenant.org/version/1/4/
+[1]: ./CODE_OF_CONDUCT.md
+[2]: https://github.com/kevinpollet/pika-plugin-pkg-node/issues
+[3]: https://github.com/kevinpollet/pika-plugin-pkg-node/pulls
