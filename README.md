@@ -1,4 +1,7 @@
-# pika-plugin-pkg-node &middot; [![Build Status](https://dev.azure.com/kevinpollet/pika-plugin-pkg-node/_apis/build/status/kevinpollet.pika-plugin-pkg-node?branchName=master)](https://dev.azure.com/kevinpollet/pika-plugin-pkg-node/_build/latest?definitionId=5&branchName=master) ![GitHub](https://img.shields.io/github/license/kevinpollet/pika-plugin-pkg-node.svg?color=blue)
+# pika-plugin-pkg-node
+
+[![Build Status](https://github.com/kevinpollet/typescript-docker-multi-stage-build/workflows/Build/badge.svg)](https://github.com/kevinpollet/pika-plugin-pkg-node/actions)
+[![GitHub](https://img.shields.io/github/license/kevinpollet/pika-plugin-pkg-node.svg?color=blue)](./LICENSE.md)
 
 > A [@pika/pack][1] build plugin. Package a Node.js app into an executable that can be run on devices without installing Node.js. This plugin use the awesome [@zeit/pkg][2] library under the hood.
 
@@ -90,7 +93,8 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for more information and how to get sta
 
 ## License
 
-[MIT](./LICENSE.md) © kevinpollet
+[MIT][3] © kevinpollet
 
 [1]: https://github.com/pikapkg/pack
 [2]: https://github.com/zeit/pkg
+[3]: ./LICENSE.md
