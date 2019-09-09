@@ -3,7 +3,7 @@
 [![Build Status](https://github.com/kevinpollet/pika-plugin-pkg-node/workflows/Build/badge.svg)](https://github.com/kevinpollet/pika-plugin-pkg-node/actions)
 [![GitHub](https://img.shields.io/github/license/kevinpollet/pika-plugin-pkg-node.svg?color=blue)](./LICENSE.md)
 
-A [@pika/pack][1] build plugin. Package a Node.js app into an executable that can be run on devices without installing Node.js. This plugin use the awesome [@zeit/pkg][2] library under the hood.
+A [@pika/pack](https://github.com/pikapkg/pack) build plugin. Package a Node.js app into an executable that can be run on devices without installing Node.js. This plugin use the awesome [@zeit/pkg](https://github.com/zeit/pkg) library under the hood.
 
 ## Install
 
@@ -28,7 +28,7 @@ $ yarn add pika-plugin-pkg-node --dev          # yarn
 }
 ```
 
-For more information about [@pika/pack][1] & help getting started, [check out the main project repo][1].
+For more information about @pika/pack & help getting started, [check out the main project repo](https://github.com/pikapkg/pack).
 
 ## Options
 
@@ -92,8 +92,4 @@ Check out the [contribution guidelines](./CONTRIBUTING.md).
 
 ## License
 
-[MIT][3] © kevinpollet
-
-[1]: https://github.com/pikapkg/pack
-[2]: https://github.com/zeit/pkg
-[3]: ./LICENSE.md
+[MIT](./LICENSE.md) © kevinpollet
