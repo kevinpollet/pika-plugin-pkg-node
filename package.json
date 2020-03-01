@@ -22,7 +22,7 @@
     "version": "npm run build"
   },
   "dependencies": {
-    "@pika/types": "^0.8.1",
+    "@pika/types": "^0.9.2",
     "fs-extra": "^8.1.0",
     "pkg": "^4.4.0"
   },
