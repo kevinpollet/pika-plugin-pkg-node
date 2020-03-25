@@ -8,8 +8,8 @@ A [@pika/pack](https://github.com/pikapkg/pack) build plugin. Package a Node.js 
 ## Install
 
 ```shell
-$ npm install pika-plugin-pkg-node --save-dev  # npm
-$ yarn add pika-plugin-pkg-node --dev          # yarn
+npm install pika-plugin-pkg-node --save-dev  # npm
+yarn add pika-plugin-pkg-node --dev          # yarn
 ```
 
 ## Usage
@@ -92,4 +92,4 @@ Check out the [contribution guidelines](./CONTRIBUTING.md).
 
 ## License
 
-[MIT](./LICENSE.md) © kevinpollet
+[MIT](./LICENSE.md)
